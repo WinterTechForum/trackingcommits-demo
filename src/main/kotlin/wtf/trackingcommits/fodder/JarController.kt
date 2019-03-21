@@ -1,0 +1,14 @@
+package wtf.trackingcommits.fodder
+
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RestController
+
+@RestController
+class JarController {
+
+    @GetMapping("/")
+    fun jar(): List<Jar> {
+        return JarLister().list()
+    }
+
+}
